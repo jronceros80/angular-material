@@ -1,0 +1,22 @@
+<mat-card class="app-input-section">
+  <mat-card-content>
+    <h2 class="example-h2">Material Input</h2>
+    <mat-form-field>
+      <input matInput placeholder="First name" />
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput #nickname placeholder="Nickname" maxlength="50" />
+      <mat-hint align="end">
+        {{nickname.value.length}} / 50
+      </mat-hint>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-icon matPrefix class="app-input-icon">android</mat-icon>
+      <input matInput placeholder="Favorite phone">
+    </mat-form-field>
+    <mat-form-field>
+      <mat-icon matPrefix class="app-input-icon">motorcycle</mat-icon>
+      <input matInput placeholder="Motorcycle model">
+    </mat-form-field>
+  </mat-card-content>
+</mat-card>

@@ -1,0 +1,12 @@
+<mat-card>
+  <mat-card-content>
+      <h2 class="example-h2">Material Select</h2>
+      <mat-form-field>
+        <mat-select placeholder="Favorite colors">
+          <mat-option *ngFor="let color of colors" [value]="color.id">
+            {{color.name}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+  </mat-card-content>
+</mat-card>

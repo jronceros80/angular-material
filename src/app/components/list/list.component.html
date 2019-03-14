@@ -1,0 +1,11 @@
+<mat-card>
+  <mat-card-content>
+    <h2 class="example-h2">Material List</h2>
+    <mat-list class="app-list">
+      <mat-list-item *ngFor="let food of foods">
+        <h3 mat-line>{{food.name}}</h3>
+        <p mat-line class="demo-secondary-text">{{food.rating}}</p>
+      </mat-list-item>
+    </mat-list>
+  </mat-card-content>
+</mat-card>

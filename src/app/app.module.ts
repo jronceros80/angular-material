@@ -4,15 +4,37 @@ import { NgModule } from '@angular/core';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
+import { OptionComponent } from './components/option/option.component';
+import { SelectComponent } from './components/select/select.component';
+import { InputComponent } from './components/input/input.component';
+import { ButtonComponent } from './components/button/button.component';
+import { ChipsComponent } from './components/chips/chips.component';
+import { CheckboxComponent } from './components/checkbox/checkbox.component';
+import { ListComponent } from './components/list/list.component';
+import { GridlistComponent } from './components/gridlist/gridlist.component';
+import { appRouting } from './app.routing';
+import { NavbarComponent } from './shared/navbar/navbar.component';
+import { CardComponent } from './components/card/card.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    OptionComponent,
+    SelectComponent,
+    InputComponent,
+    ButtonComponent,
+    ChipsComponent,
+    CheckboxComponent,
+    ListComponent,
+    GridlistComponent,
+    NavbarComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    appRouting
   ],
   providers: [],
   bootstrap: [AppComponent]
