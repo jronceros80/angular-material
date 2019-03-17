@@ -15,6 +15,7 @@ import { GridlistComponent } from './components/gridlist/gridlist.component';
 import { appRouting } from './app.routing';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { CardComponent } from './components/card/card.component';
+import { PaginationComponent } from './components/pagination/pagination.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { CardComponent } from './components/card/card.component';
     ListComponent,
     GridlistComponent,
     NavbarComponent,
-    CardComponent
+    CardComponent,
+    PaginationComponent
   ],
   imports: [
     BrowserModule,

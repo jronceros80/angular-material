@@ -8,6 +8,7 @@ import { CheckboxComponent } from './components/checkbox/checkbox.component';
 import { ListComponent } from './components/list/list.component';
 import { GridlistComponent } from './components/gridlist/gridlist.component';
 import { CardComponent } from './components/card/card.component';
+import { PaginationComponent } from './components/pagination/pagination.component';
 
 const routes: Routes = [
     { path: 'option', component: OptionComponent },
@@ -19,6 +20,7 @@ const routes: Routes = [
     { path: 'list', component: ListComponent },
     { path: 'gridlist', component: GridlistComponent },
     { path: 'card', component: CardComponent },
+    { path: 'pagination', component: PaginationComponent },
     { path: '', pathMatch: 'full', redirectTo: 'option' }
 ];
 
