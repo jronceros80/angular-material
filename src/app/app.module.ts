@@ -1,6 +1,7 @@
 import { MaterialModule } from './material.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
@@ -16,6 +17,8 @@ import { appRouting } from './app.routing';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { CardComponent } from './components/card/card.component';
 import { PaginationComponent } from './components/pagination/pagination.component';
+import { DialogComponent } from './components/dialog/dialog.component';
+import { DialogOverviewComponent } from './components/dialog/dialog-overview/dialog-overview.component';
 
 @NgModule({
   declarations: [
@@ -30,15 +33,21 @@ import { PaginationComponent } from './components/pagination/pagination.componen
     GridlistComponent,
     NavbarComponent,
     CardComponent,
-    PaginationComponent
+    PaginationComponent,
+    DialogComponent,
+    DialogOverviewComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     MaterialModule,
+    FormsModule,
     appRouting
   ],
   providers: [],
+  entryComponents: [
+    DialogOverviewComponent
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

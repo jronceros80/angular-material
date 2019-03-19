@@ -9,6 +9,7 @@ import { ListComponent } from './components/list/list.component';
 import { GridlistComponent } from './components/gridlist/gridlist.component';
 import { CardComponent } from './components/card/card.component';
 import { PaginationComponent } from './components/pagination/pagination.component';
+import { DialogComponent } from './components/dialog/dialog.component';
 
 const routes: Routes = [
     { path: 'option', component: OptionComponent },
@@ -21,6 +22,7 @@ const routes: Routes = [
     { path: 'gridlist', component: GridlistComponent },
     { path: 'card', component: CardComponent },
     { path: 'pagination', component: PaginationComponent },
+    { path: 'dialog', component: DialogComponent },
     { path: '', pathMatch: 'full', redirectTo: 'option' }
 ];
 
