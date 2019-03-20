@@ -1,7 +1,7 @@
 import { MaterialModule } from './material.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
@@ -19,6 +19,7 @@ import { CardComponent } from './components/card/card.component';
 import { PaginationComponent } from './components/pagination/pagination.component';
 import { DialogComponent } from './components/dialog/dialog.component';
 import { DialogOverviewComponent } from './components/dialog/dialog-overview/dialog-overview.component';
+import { TableDinamicComponent } from './components/table-dinamic/table-dinamic.component';
 
 @NgModule({
   declarations: [
@@ -35,14 +36,16 @@ import { DialogOverviewComponent } from './components/dialog/dialog-overview/dia
     CardComponent,
     PaginationComponent,
     DialogComponent,
-    DialogOverviewComponent
+    DialogOverviewComponent,
+    TableDinamicComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     MaterialModule,
     FormsModule,
-    appRouting
+    ReactiveFormsModule,
+    appRouting,
   ],
   providers: [],
   entryComponents: [

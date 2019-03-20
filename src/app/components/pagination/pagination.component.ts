@@ -1,13 +1,14 @@
-import {Component, ViewChild, AfterViewInit} from '@angular/core';
+import {Component, ViewChild, AfterViewInit, OnInit} from '@angular/core';
 import {MatPaginator, MatTableDataSource, MatSort} from '@angular/material';
 import { PeriodicElement } from './model/periodic-element';
+import { FormGroup, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-pagination',
   templateUrl: './pagination.component.html',
   styleUrls: ['./pagination.component.css']
 })
-export class PaginationComponent implements AfterViewInit {
+export class PaginationComponent implements OnInit, AfterViewInit {
 
   displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
   dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
@@ -15,6 +16,8 @@ export class PaginationComponent implements AfterViewInit {
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
 
+  ngOnInit() {
+  }
   /**
    * Set the paginator and sort after the view init since this component will
    * be able to query its view for the initialized paginator and sort.
@@ -28,6 +31,10 @@ export class PaginationComponent implements AfterViewInit {
     filterValue = filterValue.trim(); // Remove whitespace
     filterValue = filterValue.toLowerCase(); // Datasource defaults to lowercase matches
     this.dataSource.filter = filterValue;
+  }
+
+  onSubmit() {
+    // TODO: Use EventEmitter with form value
   }
 
 }

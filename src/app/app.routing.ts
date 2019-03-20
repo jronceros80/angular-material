@@ -10,6 +10,7 @@ import { GridlistComponent } from './components/gridlist/gridlist.component';
 import { CardComponent } from './components/card/card.component';
 import { PaginationComponent } from './components/pagination/pagination.component';
 import { DialogComponent } from './components/dialog/dialog.component';
+import { TableDinamicComponent } from './components/table-dinamic/table-dinamic.component';
 
 const routes: Routes = [
     { path: 'option', component: OptionComponent },
@@ -23,6 +24,7 @@ const routes: Routes = [
     { path: 'card', component: CardComponent },
     { path: 'pagination', component: PaginationComponent },
     { path: 'dialog', component: DialogComponent },
+    { path: 'table-dinamic', component: TableDinamicComponent },
     { path: '', pathMatch: 'full', redirectTo: 'option' }
 ];
 
