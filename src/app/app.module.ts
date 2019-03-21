@@ -20,6 +20,8 @@ import { PaginationComponent } from './components/pagination/pagination.componen
 import { DialogComponent } from './components/dialog/dialog.component';
 import { DialogOverviewComponent } from './components/dialog/dialog-overview/dialog-overview.component';
 import { TableDinamicComponent } from './components/table-dinamic/table-dinamic.component';
+import { TableEditableComponent } from './components/table-editable/table-editable.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -37,7 +39,8 @@ import { TableDinamicComponent } from './components/table-dinamic/table-dinamic.
     PaginationComponent,
     DialogComponent,
     DialogOverviewComponent,
-    TableDinamicComponent
+    TableDinamicComponent,
+    TableEditableComponent
   ],
   imports: [
     BrowserModule,
@@ -45,6 +48,7 @@ import { TableDinamicComponent } from './components/table-dinamic/table-dinamic.
     MaterialModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule,
     appRouting,
   ],
   providers: [],

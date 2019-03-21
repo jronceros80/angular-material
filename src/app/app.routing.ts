@@ -11,6 +11,7 @@ import { CardComponent } from './components/card/card.component';
 import { PaginationComponent } from './components/pagination/pagination.component';
 import { DialogComponent } from './components/dialog/dialog.component';
 import { TableDinamicComponent } from './components/table-dinamic/table-dinamic.component';
+import { TableEditableComponent } from './components/table-editable/table-editable.component';
 
 const routes: Routes = [
     { path: 'option', component: OptionComponent },
@@ -25,6 +26,7 @@ const routes: Routes = [
     { path: 'pagination', component: PaginationComponent },
     { path: 'dialog', component: DialogComponent },
     { path: 'table-dinamic', component: TableDinamicComponent },
+    { path: 'table-edit', component: TableEditableComponent },
     { path: '', pathMatch: 'full', redirectTo: 'option' }
 ];
 
