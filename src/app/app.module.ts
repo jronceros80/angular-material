@@ -22,6 +22,7 @@ import { DialogOverviewComponent } from './components/dialog/dialog-overview/dia
 import { TableDinamicComponent } from './components/table-dinamic/table-dinamic.component';
 import { TableEditableComponent } from './components/table-editable/table-editable.component';
 import { HttpClientModule } from '@angular/common/http';
+import { TableBasicComponent } from './components/table-basic/table-basic.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { HttpClientModule } from '@angular/common/http';
     DialogComponent,
     DialogOverviewComponent,
     TableDinamicComponent,
-    TableEditableComponent
+    TableEditableComponent,
+    TableBasicComponent
   ],
   imports: [
     BrowserModule,

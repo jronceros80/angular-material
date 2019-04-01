@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, AfterViewInit } from '@angular/core';
+import { Component, OnInit, ViewChild, AfterViewInit, ChangeDetectorRef } from '@angular/core';
 import { FormArray, FormGroup, FormBuilder } from '@angular/forms';
 import { User } from './model/user.model';
 import { AlbumService } from './service/album.service';
@@ -10,10 +10,10 @@ import { MatTableDataSource, MatPaginator, MatSort } from '@angular/material';
   templateUrl: './table-editable.component.html',
   styleUrls: ['./table-editable.component.css']
 })
-export class TableEditableComponent implements OnInit, AfterViewInit {
+export class TableEditableComponent implements OnInit {
   form: FormGroup;
   users: User[] = [];
-  displayedColumns = ['id', 'userId', 'title'];
+  displayedColumns = ['id', 'title'];
   dataSource: any;
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
@@ -22,29 +22,27 @@ export class TableEditableComponent implements OnInit, AfterViewInit {
   constructor(
     private _albumService: AlbumService,
     private _userService: UserService,
-    private _formBuilder: FormBuilder
+    private _formBuilder: FormBuilder,
+    private _cdr: ChangeDetectorRef,
     ) {}
 
   ngOnInit() {
-    this.form = this._formBuilder.group({
-      albums: this._formBuilder.array([])
-    });
     this.loadData();
   }
 
   loadData() {
+    this.form = this._formBuilder.group({
+      albums: this._formBuilder.array([])
+    });
     this._albumService.getAllAsFormArray().subscribe(albums => {
       this.form.setControl('albums', albums);
     });
     this._userService.getAll().subscribe(users => {
-      this.users = users;
-      this.dataSource = new MatTableDataSource(this.users);
+      this.dataSource = new MatTableDataSource(users);
+      this._cdr.detectChanges();
+      this.dataSource.paginator = this.paginator;
+      this.dataSource.sort = this.sort;
     });
-  }
-
-  ngAfterViewInit() {
-    this.dataSource.paginator = this.paginator;
-    this.dataSource.sort = this.sort;
   }
 
   get albums(): FormArray {

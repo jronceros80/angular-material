@@ -12,6 +12,7 @@ import { PaginationComponent } from './components/pagination/pagination.componen
 import { DialogComponent } from './components/dialog/dialog.component';
 import { TableDinamicComponent } from './components/table-dinamic/table-dinamic.component';
 import { TableEditableComponent } from './components/table-editable/table-editable.component';
+import { TableBasicComponent } from './components/table-basic/table-basic.component';
 
 const routes: Routes = [
     { path: 'option', component: OptionComponent },
@@ -27,6 +28,7 @@ const routes: Routes = [
     { path: 'dialog', component: DialogComponent },
     { path: 'table-dinamic', component: TableDinamicComponent },
     { path: 'table-edit', component: TableEditableComponent },
+    { path: 'table-basic', component: TableBasicComponent },
     { path: '', pathMatch: 'full', redirectTo: 'option' }
 ];
 
