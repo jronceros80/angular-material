@@ -23,6 +23,7 @@ import { TableDinamicComponent } from './components/table-dinamic/table-dinamic.
 import { TableEditableComponent } from './components/table-editable/table-editable.component';
 import { HttpClientModule } from '@angular/common/http';
 import { TableBasicComponent } from './components/table-basic/table-basic.component';
+import { FileUploadComponent } from './components/file-upload/file-upload.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { TableBasicComponent } from './components/table-basic/table-basic.compon
     DialogOverviewComponent,
     TableDinamicComponent,
     TableEditableComponent,
-    TableBasicComponent
+    TableBasicComponent,
+    FileUploadComponent
   ],
   imports: [
     BrowserModule,

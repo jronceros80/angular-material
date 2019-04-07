@@ -13,6 +13,7 @@ import { DialogComponent } from './components/dialog/dialog.component';
 import { TableDinamicComponent } from './components/table-dinamic/table-dinamic.component';
 import { TableEditableComponent } from './components/table-editable/table-editable.component';
 import { TableBasicComponent } from './components/table-basic/table-basic.component';
+import { FileUploadComponent } from './components/file-upload/file-upload.component';
 
 const routes: Routes = [
     { path: 'option', component: OptionComponent },
@@ -29,6 +30,7 @@ const routes: Routes = [
     { path: 'table-dinamic', component: TableDinamicComponent },
     { path: 'table-edit', component: TableEditableComponent },
     { path: 'table-basic', component: TableBasicComponent },
+    { path: 'upload-file', component: FileUploadComponent },
     { path: '', pathMatch: 'full', redirectTo: 'option' }
 ];
 
